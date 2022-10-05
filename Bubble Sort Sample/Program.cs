@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Raynanda Aqiyas Pramardhika_20210140024_C
+
+using System;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Bubble_Sort
@@ -31,7 +33,7 @@ namespace Bubble_Sort
             Console.WriteLine("---------------------");
 
             //pengguna memasukan elemen pada array
-            for (int i = 0; i < n;  i++)
+            for (int i = 0; i < n; i++)
             {
                 Console.Write("<" + (i + 1) + "> ");
                 string s1 = Console.ReadLine();
@@ -53,11 +55,11 @@ namespace Bubble_Sort
             Console.WriteLine("");
         }
         public void BubbleSortArraay()
+        {
+            for (int i = 1; i < n; i++) // For n - 1 passes
             {
-                for (int i = 1; i < n; i++) // For n - 1 passes
-                {
-                    //Pada pass i, bandingkan n - i elemen pertama dengan elemen selanjutnya
-                    for (int j = 0; j < n; j++)
+                //Pada pass i, bandingkan n - i elemen pertama dengan elemen selanjutnya
+                for (int j = 0; j < n; j++)
                 {
                     if (a[j] > a[j + 1])
                     {
@@ -65,11 +67,22 @@ namespace Bubble_Sort
                         temp = a[j];
                         a[j] = a[j + 1];
                         a[j + 1] = temp;
-                        
+
                     }
                 }
-                }
             }
+        }
+        static void Main(string[] args)
+        {
+            //creating the object of the BubbleSort class
+            Program myList = new Program();
+            //pemanggilan fungsi untuk menerima elemen array
+            myList.read();
+            //pemanggilan fungsi untuk menampilkan array yang tersusun
+            myList.display();
+            //exit
+            Console.WriteLine("\n\nTekan Tombol Apa Saja Untuk Keluar");
+            Console.Read();
         }
     }
 }
