@@ -37,11 +37,12 @@ namespace Bubble_Sort
                 a[i] = Int32.Parse(s1);
             }
         }
+        
         public void display()
         {
             //menampilkan array yang tersusun
             Console.WriteLine("");
-            Console.
+            Console.Write
         }
     }
 }
