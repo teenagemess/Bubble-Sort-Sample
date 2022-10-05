@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Bubble_Sort
 {
@@ -37,7 +38,7 @@ namespace Bubble_Sort
                 a[i] = Int32.Parse(s1);
             }
         }
-        
+
         public void display()
         {
             //menampilkan array yang tersusun
@@ -48,6 +49,15 @@ namespace Bubble_Sort
             for (int j = 0; j < n; j++)
             {
                 Console.WriteLine(a[j]);
+            }
+            Console.WriteLine("");
+        }
+        public void BubbleSortArraay()
+            {
+                for (int i = 1; i < n; i++)
+                {
+
+                }
             }
         }
     }
