@@ -54,9 +54,20 @@ namespace Bubble_Sort
         }
         public void BubbleSortArraay()
             {
-                for (int i = 1; i < n; i++)
+                for (int i = 1; i < n; i++) // For n - 1 passes
                 {
-
+                    //Pada pass i, bandingkan n - i elemen pertama dengan elemen selanjutnya
+                    for (int j = 0; j < n; j++)
+                {
+                    if (a[j] > a[j + 1])
+                    {
+                        int temp;
+                        temp = a[j];
+                        a[j] = a[j + 1];
+                        a[j + 1] = temp;
+                        
+                    }
+                }
                 }
             }
         }
